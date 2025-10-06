@@ -15,3 +15,16 @@ def newton_raphson(expr_str, x0, n_iter=10, tol=1e-6):
     dfxi = df(xi)
     if abs(dfxi) < 1e-12:
       raise ZeroDivisionError("Turunan nol.")
+
+    x_next = xi - fxi / dfxi
+    err = abs(x_next - xi)
+
+    data.append((i, xi, fxi, dfxi, err))
+    xi = x_next
+
+    if err < tol:
+      for j in range(i + 1, n_iter + 1):
+        data.append((j, xi, f(xi), df(xi), 0.0))
+      break
+
+  return data, xi
