@@ -66,3 +66,9 @@ Aplikasi ini dilengkapi dengan **GUI (Graphical User Interface)** sehingga pengg
    ```bash
    git clone https://github.com/Mahdaannisa/Midterm-Project-Newton-Raphson-By-Group-5.git
 
+ ## Install dependencies sesuai file **requirements.txt**  
+   ⚠️ Pastikan perintah dijalankan pada path yang sama dengan file `requirements.txt`  
+
+   ```bash
+   pip install -r requirements.txt
+
