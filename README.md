@@ -64,5 +64,5 @@ Aplikasi ini dilengkapi dengan **GUI (Graphical User Interface)** sehingga pengg
 ## ▶️ Cara Menjalankan
 1. Clone repositori ini:
    ```bash
-   git clone https://github.com/username/nama-repo.git
+   git clone https://github.com/Mahdaannisa/Midterm-Project-Newton-Raphson-By-Group-5.git
 
