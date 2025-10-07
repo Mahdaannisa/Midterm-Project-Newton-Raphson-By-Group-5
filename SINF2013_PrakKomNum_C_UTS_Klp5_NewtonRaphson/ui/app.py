@@ -1,11 +1,4 @@
-import tkinter as tk
-from tkinter import ttk, messagebox
-from core.formatter import format_persamaan, fmt_excel
-from core.newton import newton_raphson
-from core.plotter import tampilkan_plot
 
-class NewtonApp:
-    def __init__(self, root):
         self.root = root
         self.root.title("Metode Newton-Raphson")
         self.root.geometry("1200x700")
