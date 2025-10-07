@@ -1,3 +1,4 @@
+#Bismillah, Selamat Mencoba :)
 from ui.app import NewtonApp
 import tkinter as tk
 
