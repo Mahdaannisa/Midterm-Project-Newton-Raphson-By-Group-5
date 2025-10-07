@@ -25,15 +25,12 @@ Aplikasi ini dilengkapi dengan **GUI (Graphical User Interface)** sehingga pengg
 ---
 
 ## ⚙️ Metode Newton-Raphson
-1. Tentukan fungsi \( f(x) \) dan turunan pertamanya \( f'(x) \).
-2. Masukkan nilai tebakan awal \( x_0 \).
-3. Tentukan toleransi error \( \varepsilon \) (misalnya 0.0001).
-4. Lakukan iterasi dengan rumus:
-   \[
-   x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
-   \]
-5. Iterasi berhenti jika \( |x_{n+1} - x_n| < \varepsilon \).
-
+1. Tentukan fungsi f(x) dan turunan pertamanya f'(x).  
+2. Masukkan nilai tebakan awal x₀.  
+3. Tentukan toleransi error ε (misalnya 0.0001).  
+4. Lakukan iterasi dengan rumus: `x_(n+1) = x_n - f(x_n)/f'(x_n)`.  
+5. Iterasi berhenti jika `|x_(n+1) - x_n| < ε`.
+ 
 ---
 
 ## 📂 Struktur Proyek
@@ -42,6 +39,25 @@ Aplikasi ini dilengkapi dengan **GUI (Graphical User Interface)** sehingga pengg
 - **`formatter.py`** → Modul untuk memformat input & output agar bisa diproses Python dan ditampilkan rapi.  
 - **`newton.py`** → Logika utama metode Newton-Raphson (perhitungan iterasi, turunan, galat).  
 - **`plotter.py`** → Menampilkan grafik fungsi & posisi akar secara visual.  
+
+---
+
+## 📂 Penjelasan Singkat Kode
+
+1. **main.py**  
+   Fungsi: Entry point (program utama). Isinya biasanya cuma menjalankan app.py (GUI). Jadi saat user jalankan `python main.py`, program langsung membuka aplikasi Newton-Raphson.  
+
+2. **app.py**  
+   Fungsi: Membuat GUI (Graphical User Interface). User bisa input fungsi f(x), tebakan awal x₀, jumlah iterasi, dan error toleransi (ε). Output yang ditampilkan berupa tabel hasil iterasi dan grafik fungsi dengan posisi akar.  
+
+3. **formatter.py**  
+   Fungsi: Memformat input dan output. Contoh: user menulis `x^2 - 4`, lalu file ini mengubahnya menjadi format Python `x**2 - 4`. Output angka juga diformat agar lebih rapi.  
+
+4. **newton.py**  
+   Fungsi: Inti perhitungan metode Newton-Raphson. Menggunakan rumus `x_next = x - f(x)/f_prime(x)`. Proses dilakukan berulang sampai error < toleransi, lalu hasilnya dikembalikan sebagai akar hampiran.  
+
+5. **plotter.py**  
+   Fungsi: Visualisasi grafik. Menampilkan kurva f(x) dan posisi akar yang ditemukan, sehingga user bisa melihat proses pencarian akar secara visual.  
 
 ---
 
