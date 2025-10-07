@@ -1,4 +1,4 @@
-import re
+
 
 def format_persamaan(teks):
     teks = teks.replace("^", "**").replace("=0", "").strip()
