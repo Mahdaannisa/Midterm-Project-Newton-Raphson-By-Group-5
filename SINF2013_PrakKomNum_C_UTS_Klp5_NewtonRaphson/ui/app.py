@@ -79,26 +79,3 @@ class NewtonApp:
         self.plot_frame = tk.Frame(frame, bg="#1b0f08")
         self.plot_frame.pack(side="right", fill="both", expand=True, padx=10)
 
-    def hitung(self):
-        for i in self.tree.get_children():
-            self.tree.delete(i)
-        try:
-            expr_raw = self.ent_fx.get()
-            expr = format_persamaan(expr_raw)
-            x0 = float(self.ent_x0.get())
-            n = int(self.ent_n.get())
-            tol = float(self.ent_tol.get())
-            hasil, akar = newton_raphson(expr, x0, n, tol)
-        except Exception as e:
-            messagebox.showerror("Error", str(e))
-            return
-
-        for (i, xi, fxi, dfxi, err) in hasil:
-            self.tree.insert("", "end", values=(i, fmt_excel(xi), fmt_excel(fxi), fmt_excel(dfxi)))
-
-        self.label_hasil.config(
-            text=f"Akar hampiran ≈ {fmt_excel(akar)}   |   Galat terakhir = {fmt_excel(hasil[-1][4])}"
-        )
-
-    def plot(self):
-        tampilkan_plot(self.ent_fx.get(), self.plot_frame)
