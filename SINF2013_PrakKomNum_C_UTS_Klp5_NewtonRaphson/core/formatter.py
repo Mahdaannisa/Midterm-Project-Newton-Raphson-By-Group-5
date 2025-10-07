@@ -11,5 +11,3 @@ def fmt_excel(v):
         return f"{float(v):.9f}".rstrip('0').rstrip('.') if '.' in f"{float(v):.9f}" else f"{float(v):.9f}"
     except:
         return str(v)
-
-def
